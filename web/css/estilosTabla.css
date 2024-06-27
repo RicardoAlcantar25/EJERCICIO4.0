@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+table{
+    width: 80%;
+    border-collapse: collapse;
+    border: 3px solid purple;
+}
+th{
+    background-color: purple;
+    color: white  ;
+}
+td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid purple;
+}
+tr:nth-child(odd){
+    background-color: aquamarine;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.descripcion{
+    width: 40%;
+}
+.Tarjeta{
+    width: 40%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    color: white;
+}
+.Cuerpo{
+    background-color: red;
+}
+.Tarjeta1{
+    width: 40%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    color: white;
+}
+.Cuerpo2{
+    background-color: blue;
+}
+.Tarjeta2{
+    width: 40%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    color: white;
+
+}
+.Cuerpo3{
+    background-color: green;
+}
+.Descripcion1{
+    width: 80%;
+}
+.Descripcion2{
+    width: 80%;
+}
+.Descripcion3{
+    width: 80%;
+}
+.Encabezado{
+    color: white;
+    text-align: center;
+    background-color: black;
+}
