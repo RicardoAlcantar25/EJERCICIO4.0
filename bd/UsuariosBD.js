@@ -44,19 +44,24 @@ async usuarioId (id) {
   }
 }
 async editarUsuario(usuario){
-  const sql="UPDATE usuarios SET nombre='"+usuario.nombre+"', celular='"+usuario.celular+"', correo='"+usuario.correo+"'WHERE idusuarios='"+usuario.idusuarios+"';";
+  // const sql="UPDATE usuarios SET nombre='"+usuario.nombre+"', celular='"+usuario.celular+"', correo='"+usuario.correo+"'WHERE id_usuarios='"+usuario.idusuarios+"';";
+  const sql2=`UPDATE usuarios SET 
+  nombre='${usuario.nombre}',
+  celular='${usuario.celular}',
+  correo='${usuario.correo}'
+  WHERE id_usuarios = ${usuario.idusuario};`;
   try {
       await this.conectarMySql();
-      await this.conexion.execute(sql);
+      await this.conexion.execute(sql2);
       await this.cerrarConexion();
       console.log("Actuzalizacion correcta de usuario");
   } catch (error) {
       console.error("Error al editar usuario"+error);
-      console.error(sql);
+      console.error(sql2);
   }
 }
-async borrarUsuario(id){
-  const sql="DELETE FROM usuarios WHERE id_usuarios="+id;
+async borrarUsuario(idusuario){
+  const sql="DELETE FROM usuarios WHERE id_usuarios="+idusuario;
   try {
       await this.conectarMySql();
       await this.conexion.execute(sql);

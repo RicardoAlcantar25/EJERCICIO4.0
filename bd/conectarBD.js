@@ -9,11 +9,11 @@ class ConectarBD{
     async conectarMySql(){
        try{
            this.conexion=await this.mysql.createConnection({
-                host:process.env.HOSTMYSQL || "bxyisrkaelftzwityylg-mysql.services.clever-cloud.com",
-                user:process.env.USERMYSQL || "uolgvi5w7kx5umee",
-                password:process.env.PASSWORDMYSQL || "RDxwIAwHMiz8iThNXxBT",
-                database:process.env.DATABASEMYSQL || "bxyisrkaelftzwityylg",
-                port:process.env.PORTMYSQL || 3306
+                host:process.env.HOSTMYSQL,
+                user:process.env.USERMYSQL ,
+                password:process.env.PASSWORDMYSQL ,
+                database:process.env.DATABASEMYSQL ,
+                port:process.env.PORTMYSQL
 
 
                 
