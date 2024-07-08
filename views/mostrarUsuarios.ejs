@@ -1,42 +1,37 @@
-<%- include("templates/encabezado") %>                      
-  <div class="contenedor">
-     <table>
-         <thead>
-             <tr>
-                 <th>ID</th>
-                 <th>Nombre</th>
-                 <th>Celular</th>
-                 <th>Correo</th>
-                 <th>Editar / Borrar</th>
-             </tr>
-         </thead>
-         <tbody>
-            
-            <% usuariosCorrectos.forEach((usuario)=>{ %>
-             
-
-
-             <tr>
-                 <td><%= usuario.idusuarios %></td>
-                 <td><%= usuario.nombre %></td>
-                 <td><%= usuario.celular %></td>
-                 <td><%= usuario.correo %></td>
-                 <td>
-                    <a href="/editarUsuario/<%= usuario.idusuarios %>">Editar</a> / 
-                    <a href="/borrarUsuario/<%= usuario.idusuarios %>">Borrar</a>
-                 </td>
-             </tr>
-            
-             <%  }); %>
-            
-
-         </tbody>
-     </table>
- </div>
+<%- include ("templates/encabezado") %>
+<h1>Vista de usuarios</h1>
+<div class="contenedor">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Celular</th>
+                <th>Correo</th>
+                <th>Editar / Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% usuariosCorrectos.forEach((usuario) => { %>
+            <tr>
+                <td><%= usuario.id_usuarios %></td>
+                <td><%= usuario.nombre %></td>
+                <td><%= usuario.celular %></td>
+                <td><%= usuario.correo %></td>
+                <td>
+                    <a href="/editarUsuario/<%= usuario.id_usuarios %>">Editar</a> / 
+                    <a href="/borrarUsuario/<%= usuario.id_usuarios %>">Borrar</a>
+                </td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <a href="/agregarUsuario" class="agregar">Agregar Usuario</a>
+    <a href="/agregarProducto" class="agregar1">Agregar Producto</a>
+</div>
 
 <br>
+<a href="/productos" class="Ver">Ver Productos</a>
 <br>
 
-
-
-<%- include("templates/pie") %>
+<%- include ("templates/pie") %>

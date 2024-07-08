@@ -1,11 +1,11 @@
 class Usuario{
     constructor(usuario1){
-        
-        this.id=usuario1.id;
+        this.id=usuario1.id_usuarios;
         this.nombre=usuario1.nombre;
         this.celular=usuario1.celular;
         this.correo=usuario1.correo;
     }
+
     set id(id){
         this._id=id;
     }
@@ -18,11 +18,10 @@ class Usuario{
     }
 
     set celular(celular){
-    var regexCelular = /^\d{10}$/;
-    if(regexCelular.test(celular)){
-        this._celular=celular;
-    }
-        
+        var regexCelular = /^\d{10}$/;
+        if(regexCelular.test(celular)){
+            this._celular=celular;
+        }
     }
 
     set correo(correo){
@@ -30,7 +29,10 @@ class Usuario{
         if(regexCorreo.test(correo)){
             this._correo=correo;
         }
-        
+    }
+
+    get id(){
+        return this._id;
     }
 
     get nombre(){
@@ -45,10 +47,6 @@ class Usuario{
         return this._correo;
     }
 
-    get id(){
-        return this._id;
-    }
-
     get mostrarDatos(){
         return {
             id:this.id,
@@ -58,5 +56,6 @@ class Usuario{
         }
     }
 }
+
 
 module.exports=Usuario;

@@ -6,7 +6,7 @@
 form{
     margin-top: 20px;
     width: 310px;
-    box-shadow: 0 0 20px pink;
+    box-shadow: 0 0 20px rgb(4, 0, 255);
     padding: 30px;
     border-radius: 7px;
 }
@@ -20,16 +20,16 @@ input{
     margin-top: 5px;
     margin-bottom: 15px;
     padding: 7px;
-    background-color: rgb(237, 218, 234);
+    background-color: rgb(84, 170, 255);
     border: 0px;
     border-radius: 5px;
-    outline-color: rgb(251, 0, 255);
+    outline-color: rgb(22, 255, 162);
     width: 80%;
 }
 button{
     margin-top: 20px;
     padding: 7px;
-    background-color: rgb(239, 164, 243);
+    background-color: rgb(2, 255, 91);
     color: white;
     border: 0px;
     cursor: pointer;
@@ -59,5 +59,102 @@ visibility: hidden;
     font-size: small;
 }
 .circleCheckNombre, .circleCheckCelular, .circleCheckCorreo{
-    color: rgb(255, 47, 144);
+    color: rgb(47, 255, 68);
+}
+.agregar, .agregar1 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 280px; 
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.Ver {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px; 
+    margin-left: 50px;
+    background-color: #3054f6;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px
+}
+
+/* Estilos Tablas*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+table{
+    width: 80%;
+    border-collapse: collapse;
+    border: 3px solid purple;
+}
+th{
+    background-color: purple;
+    color: white  ;
+}
+td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid purple;
+}
+tr:nth-child(odd){
+    background-color: aquamarine;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.descripcion{
+    width: 40%;
+}
+.Tarjeta{
+    width: 40%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    color: white;
+}
+.Cuerpo{
+    background-color: red;
+}
+.Tarjeta1{
+    width: 40%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    color: white;
+}
+.Cuerpo2{
+    background-color: blue;
+}
+.Tarjeta2{
+    width: 40%;
+    border-collapse: collapse;
+    border: 2px solid black;
+    color: white;
+
+}
+.Cuerpo3{
+    background-color: green;
+}
+.Descripcion1{
+    width: 80%;
+}
+.Descripcion2{
+    width: 80%;
+}
+.Descripcion3{
+    width: 80%;
+}
+.Encabezado{
+    color: white;
+    text-align: center;
+    background-color: black;
 }

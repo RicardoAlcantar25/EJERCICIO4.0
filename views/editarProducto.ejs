@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 - formulario</title>
+    <link rel="stylesheet" href="http://127.0.0.1:3000/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="JS/formularioProductos.js" defer></script>
+</head>
+
+<body>
+    <h1>Registro de datos</h1>
+    <div class="contenedor">
+        <form action="/editarProducto" method="post" id="formularioProductos">
+
+            <input value=<%= idproducto %> name="idproducto" id="idproducto" type="text">
+
+            <label for="nombre">Nombre de producto:</label><span class="ocultar mensajeNombre">Nombre no válido</span>
+            <input value=<%= nombre %> autofocus name="nombre" id="nombre" type="text" placeholder="Nombre">
+            <i class="ocultar circleCrossNombre fa-regular fa-circle-xmark"></i>
+            <i class="ocultar circleCheckNombre fa-regular fa-circle-check"></i>
+
+            <label for="descripcion">Descripcion del producto:</label><span class="ocultar mensajeDescripcion">Descripción no válida</span>
+            <input value=<%= descripcion %> name="descripcion" id="descripcion" type="text" placeholder="Descripción">
+            <i class="ocultar circleCrossDescripcion fa-regular fa-circle-xmark"></i>
+            <i class="ocultar circleCheckDescripcion fa-regular fa-circle-check"></i>
+
+            <label for="precio">Precio del producto:</label><span class="ocultar mensajePrecio">Precio</span>
+            <input value=<%= precio %> name="precio" id="precio" type="text" placeholder="Precio">
+            <i class="ocultar circleCrossPrecio fa-regular fa-circle-xmark"></i>
+            <i class="ocultar circleCheckPrecio fa-regular fa-circle-check"></i>
+            
+            <button type="submit">Guardar datos</button>
+        </form>
+    </div>
+</body>
+
+</html>

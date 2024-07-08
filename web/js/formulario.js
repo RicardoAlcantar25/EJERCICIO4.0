@@ -121,5 +121,5 @@ formulario.addEventListener("submit", (e)=>{
     }
     if(avanzar=1){
         formulario.submit();
-    }
-})
+    }
+}) 
